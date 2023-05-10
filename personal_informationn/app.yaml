@@ -1,17 +1,17 @@
 runtime: python37
 
 handlers:
-- url: /picture(.*\.(gif|png|jpg))$
+- url: /(.*\.(gif|png|jpg))$
   static_files: \1
-  upload: picture/(.*\.(gif|png|jpg))$
+  upload: picture.png
 
-- url: /style(.*\.css)$
+- url: /(.*\.css)$
   static_files: \1
-  upload: style/(.*\.css)$
+  upload: style.css
 
-- url: /html(.*\.html)$
+- url: /(.*\.html)$
   static_files: \1
-  upload: index/(.*\.html)$
+  upload: index.html
 
 - url: /(.*)
   static_files: index.html
