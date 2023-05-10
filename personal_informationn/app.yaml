@@ -1,0 +1,18 @@
+runtime: python37
+
+handlers:
+- url: /picture(.*\.(gif|png|jpg))$
+  static_files: \1
+  upload: picture/(.*\.(gif|png|jpg))$
+
+- url: /style(.*\.css)$
+  static_files: \1
+  upload: style/(.*\.css)$
+
+- url: /html(.*\.html)$
+  static_files: \1
+  upload: index/(.*\.html)$
+
+- url: /(.*)
+  static_files: index.html
+  upload: index.html
